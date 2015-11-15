@@ -10,6 +10,8 @@ access_token_secret = "UPnD92ncl5XSFvGrP8WKc5qOKdcPFtCQvrUhmGBOj91m3"
 consumer_key = "Jh47JH54FQnQkCsDv7Kr2aq7d"
 consumer_secret = "amXdnvILRcvrGM9iOhfVgQ8FnFSEkwrlNCXDXYaqS5tgHnRcwC"
 
+# These are the hash tags that twibble will listen for sentiments 
+hash_tags = ['#twibblets']
 
 #This is a basic listener that just prints received tweets to stdout.
 class StdOutListener(StreamListener):
@@ -31,4 +33,4 @@ if __name__ == '__main__':
     stream = Stream(auth, listener)
 
     #This line filter Twitter Streams to capture data by the keywords: 'python', 'javascript', 'ruby'
-    stream.filter(track=['twibblets'])
+    stream.filter(track=hash_tags)
