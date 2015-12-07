@@ -7,7 +7,7 @@ tweets = []
 for twit in data:
 	tweets.append(str(twit).strip())
 
-print tweets
+#print tweets
 
 #tweets = ['hello', 'pissed I am', 'I am ;)']
 
